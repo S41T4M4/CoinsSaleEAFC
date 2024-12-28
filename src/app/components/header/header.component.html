@@ -1,0 +1,31 @@
+<nav class="nav">
+  <div class="nav-logo">
+    <img src="/assets/logo.png" alt="">
+  </div>
+  <div class="nav-menu" id="navMenu">
+    <ul>
+      <li><a routerLink="/home" class="link active">Home</a></li>
+      <li><a href="https://s41t4m4.github.io/portfolio/" class="link">Blog</a></li>
+      <li><a href="https://www.instagram.com/ibr4im__/" class="link">Contact</a></li>
+      
+    </ul>
+  </div>
+
+  
+  <div class="nav-button" *ngIf="buttonsAppear">
+    <button class="btn-entrar" routerLink="/login">Entrar</button>
+    <button class="btn-cadastrar" routerLink="/cadastro">Cadastrar-se</button>
+  </div>
+  <div class="logout" *ngIf="buttonsAppear == false">
+    <button class="btn-sair"(click)="logout()">
+      <span class="material-symbols-outlined">
+        logout
+        </span>
+    </button>
+    
+  </div>
+
+  <div class="nav-menu-btn">
+    <i class="bx bx-menu" (click)="myMenuFunction()"></i>
+  </div>
+</nav>

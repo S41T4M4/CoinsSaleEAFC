@@ -1,0 +1,293 @@
+.main {
+    background: url("/assets/messi.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    min-height: 100vh;
+    padding: 120px 20px; 
+  } 
+  .header {
+    text-align: center;
+    margin-bottom: 20px; 
+  }
+  
+  .header__title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0; 
+  }
+  
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 190px; 
+    flex-wrap: nowrap; 
+  }
+  
+  .card {
+    position: relative; 
+    width: 300px;
+    height: 400px;
+    
+    border-radius: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 1.4s ease-in-out;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start; 
+  }
+  
+
+  .card__icon {
+    width: 80px;
+    height: auto; 
+    margin-top: 20px;
+    display: block;
+  }
+  
+  
+  .card__data {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: white;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%); 
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+ 
+  .card:hover .card__data {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  
+  .card__button {
+    background-color: #0bbeff68;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card__button:hover {
+    background-color: #029eb6;
+  }
+  
+  .card__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .card__description {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+ 
+  .card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card1 {
+    background-image: url("/assets/zidane.jpeg");
+  }
+  
+  .card2 {
+    background-image: url("/assets/ronaldinho.jpeg");
+  }
+  
+  .card3 {
+    background-image: url("/assets/didierdrogba.jpeg");
+  }
+  
+  .card4 {
+    background-image: url("/assets/Materazzi e Rui Costa.jpeg");
+  }
+  
+  
+
+.infos{
+    background: url("/assets/cr7.png");
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgba(39, 39, 39, 0.4);
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  gap: 30px;
+  width: 90%; 
+  margin: 0 auto;
+}
+
+
+.card-large {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #ffffff;
+}
+
+.card-large__title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-large__description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.card-large__image {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.info-cards {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px; 
+  flex: 1; 
+}
+
+
+.highlight {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Título do card */
+.highlight__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+.highlight__description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+.highlight__button {
+  display: inline-block;
+  background: #f44336;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.highlight__button:hover {
+  background: #d32f2f;
+}
+.footer{
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 50vh;
+  padding: 80px 20px; 
+}
+.footer .social{
+  text-align: center;
+  padding-bottom: 25px;
+  color:  #d32f2f; ;
+}
+.footer .social a{
+  font-size: 25px;
+  color:  #d32f2f; 
+  border: 2px solid black;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 10px;
+  transform: 0.3s ease;
+}
+.footer .social a:hover{
+  transform: scale(1.2)translateY(-5px);
+  background: black;
+  color:  #d32f2f; 
+}
+.footer ul {
+ 
+  margin: 20px 0; 
+  padding: 0;
+  list-style: none; 
+  display: flex; 
+  justify-content: center;
+  gap: 15px; 
+}
+
+.footer ul li {
+  
+  display: inline-block; 
+}
+
+.footer ul li a {
+  color:  #d32f2f; 
+  padding: 5px 10px;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.footer ul li a:hover {
+  border-bottom: 3px solid    #d32f2f; 
+}
+
+.footer .copyright{
+  margin-top: 10px;
+  text-align: center;
+  font-size: 16px;
+  color:  #d32f2f; 
+}

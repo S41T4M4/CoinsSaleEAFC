@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<div class="main">
+    <div class="confirmacao-container">
+        <h1>Confirmação de Compra</h1>
+        <div *ngIf="produto; else errorTemplate">
+          <p>Você está prestes a comprar:</p>
+          <ul>
+            <li><strong>Quantidade:</strong> {{ produto.quantidade | number }} moedas</li>
+            <li><strong>Valor:</strong> R$ {{ produto.valor }}</li>
+          </ul>
+          <button (click)="confirmarCompra()" class="confirmar">Confirmar</button>
+          <button (click)="cancelarCompra()" class="cancelar">Cancelar</button>
+        </div>
+      
+        <ng-template #errorTemplate>
+          <p>Erro: Detalhes da compra não encontrados.</p>
+          <button (click)="cancelarCompra()">Voltar</button>
+        </ng-template>
+      
+        <div *ngIf="mostrarMensagem" class="mensagem-overlay">
+          <div class="mensagem-card">
+            <h2>{{ mensagem.titulo }}</h2>
+            <p>{{ mensagem.descricao }}</p>
+            <button (click)="fecharMensagem()">Fechar</button>
+          </div>
+        </div>
+    </div>
+</div>

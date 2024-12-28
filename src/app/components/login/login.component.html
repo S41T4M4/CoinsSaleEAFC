@@ -1,0 +1,57 @@
+<app-header (loginClick)="showLogin()" (registerClick)="showRegister()"></app-header>
+<div class="main">
+  <div *ngIf="mensagemErro" class="popup error">
+    <div class="popup-content">
+      <span class="close-btn" (click)="closePopup()">&times;</span>
+      <p>{{ mensagemErro }}</p>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="form-box">
+      <div class="login-container">
+        <div class="top">
+          <h1>Coins para todas plataformas</h1>
+          <div class="imgs">
+            <div class="img-container-green" title="Coins para a Plataforma XBOX">
+              <img src="/assets/xbox.png" alt="Xbox">
+            </div>
+            <div class="img-container-red" title="Coins para a Plataforma Playstation">
+              <img src="/assets/playstation.png" alt="Playstation" >
+            </div>
+            <div class="img-container-blue" title="Coins para a Plataforma PC">
+              <img src="/assets/steam.png" alt="Steam">
+            </div>
+          </div>
+          <span>
+            Não possui conta?
+            <a routerLink="/cadastro" (click)="showRegister()">Cadastre-se</a>
+          </span>
+          <header>Login</header>
+        </div>
+
+      
+        <div class="input-box">
+          <input [(ngModel)]="email" type="email" class="input-field" placeholder="Email">
+          <i class="bx bx-user"></i>
+        </div>
+        <div class="input-box">
+          <input [(ngModel)]="password" type="password" class="input-field" placeholder="Senha">
+          <i class="bx bx-lock-alt"></i>
+        </div>
+        <div class="input-box">
+          <input type="submit" class="submit" value="Entrar" (click)="login()">
+        </div>
+        <div class="two-col">
+          <div class="one">
+            <input type="checkbox" id="login-check">
+            <label for="login-check">Lembrar-me</label>
+          </div>
+          <div class="two">
+            <label><a href="#">Esqueceu a senha?</a></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
